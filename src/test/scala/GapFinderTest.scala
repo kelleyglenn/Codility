@@ -44,7 +44,7 @@ class GapFinderTest extends org.scalatest.FunSuite {
       val start = System.nanoTime()
       assert(f(randomInts) < numberOfValues + 1)
       val stop = System.nanoTime()
-      println("time: " + (stop - start))
+      println("time: " + (stop - start) + " ns,  heap: " + Runtime.getRuntime.totalMemory() + " bytes")
       assert(stop - start < NANOS_PER_SEC)
     })
 
